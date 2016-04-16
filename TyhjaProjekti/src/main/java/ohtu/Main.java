@@ -25,8 +25,8 @@ public class Main {
 
         String bodyText = IOUtils.toString(stream);
 
-        System.out.println("json-muotoinen data:");
-        System.out.println( bodyText );
+//        System.out.println("json-muotoinen data:");
+//        System.out.println( bodyText );
 
         Gson mapper = new Gson();
         Submission[] subs = mapper.fromJson(bodyText, Submission[].class);
@@ -37,6 +37,7 @@ public class Main {
         
         int exercises = 0;
         int hours = 0;
+        System.out.println("");
         System.out.println("opiskelijanumero " + subs[0].getStudent_number());
         System.out.println("");
         for (Submission submission : subs) {
